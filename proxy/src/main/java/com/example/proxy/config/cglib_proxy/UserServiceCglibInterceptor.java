@@ -17,7 +17,7 @@ public class UserServiceCglibInterceptor implements MethodInterceptor {
 
     @Override
     public Object intercept(Object o, Method method, Object[] objects, MethodProxy methodProxy) throws Throwable {
-        System.out.println("进入动态代理");
+        System.out.println("进入cglib动态代理");
         if (objects != null && objects.length > 0 && objects[0] instanceof User) {
             System.out.println("在调度真实方法之前的服务!");
             User user = (User) objects[0];

@@ -15,7 +15,7 @@ public class UserServiceInterceptor implements InvocationHandler {
 
     @Override
     public Object invoke(Object proxy, Method method, Object[] args) throws Throwable {
-        System.out.println("进入动态代理");
+        System.out.println("进入jdk动态代理");
         if (args != null && args.length > 0 && args[0] instanceof User) {
             System.out.println("在调度真实方法之前的服务!");
             User user = (User) args[0];
